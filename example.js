@@ -11,20 +11,19 @@ const Em = { offset: 6, name: 'Em', notes: [0, 1, 3, 3, 2, 1] }
 /*
 TODO
 [x] rests
-[x] handle non 4/4 time
 */
 const songData = song('My song title', 'Ernie Bobbins',
-  measure(text('verse 1'), timeSig('4/4'), chord(CAdd9, 1), chord(D, 4.5)),
-  measure(chord(CAdd9, 1), chord(Em, 3)),
-  measure(chord(CAdd9, 1), chord(Em, 3)),
-  measure(lineBreak()),
-  measure(chord(CAdd9, 1), chord(Em, 3)),
-  measure(),
-  measure(chord(CAdd9, 1), chord(G, 4.5)),
-  measure(lineBreak()),
-  measure(chord(Em, 1), chord(CAdd9, 4.5)),
-  measure(chord(D, 4.5)),
-  measure(),
-  measure(chord(D, 3), rest(1))
+  measure('4/4')(text('verse 1'), timeSig(), chord(CAdd9, 1), chord(D, 4.5)),
+  measure('4/4')(chord(CAdd9, 1), chord(Em, 3)),
+  measure('3/4')(timeSig(), chord(CAdd9, 1), chord(Em, 3)),
+  measure('3/4')(lineBreak()),
+  measure('4/4')(timeSig(), chord(CAdd9, 1), chord(Em, 3)),
+  measure('4/4')(),
+  measure('4/4')(chord(CAdd9, 1), chord(G, 4.5)),
+  measure('4/4')(lineBreak()),
+  measure('4/4')(chord(Em, 1), chord(CAdd9, 4.5)),
+  measure('4/4')(chord(D, 4.5)),
+  measure('4/4')(),
+  measure('4/4')(chord(D, 3), rest(1))
 )
 writeMscz('A Test Song', songData)
