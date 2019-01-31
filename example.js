@@ -1,4 +1,4 @@
-const writeMscz = require('./lib/writeMscz.js')
+const writeToMscx = require('./lib/writeToMscx.js')
 const { song, measure, chord, rest, lineBreak, text, timeSig } = require('./lib/dsl')
 
 const x = 'x'
@@ -15,8 +15,8 @@ TODO
 const songData = song('My song title', 'Ernie Bobbins',
   measure('4/4')(text('verse 1'), timeSig(), chord(CAdd9, 1), chord(D, 4.5)),
   measure('4/4')(chord(CAdd9, 1), chord(Em, 3)),
-  measure('3/4')(timeSig(), chord(CAdd9, 1), chord(Em, 3)),
-  measure('3/4')(lineBreak()),
+  measure('3/4')(timeSig(), chord(CAdd9, 1), chord(Em, 3), lineBreak()),
+  measure('3/4')(),
   measure('4/4')(timeSig(), chord(CAdd9, 1), chord(Em, 3)),
   measure('4/4')(),
   measure('4/4')(chord(CAdd9, 1), chord(G, 4.5)),
@@ -26,4 +26,4 @@ const songData = song('My song title', 'Ernie Bobbins',
   measure('4/4')(),
   measure('4/4')(chord(D, 3), rest(1))
 )
-writeMscz('A Test Song', songData)
+writeToMscx('A Test Song', songData)
