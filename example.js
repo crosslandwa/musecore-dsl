@@ -16,10 +16,10 @@ TODO
 */
 
 const songData = song('My song title', 'Ernie Bobbins',
-  measure({text: 'verse 1', timeSig: '4/4'}, chord(CAdd9, 2.5), chord(D, 1.5)),
-  // measure(chord(CAdd9, 1), chord(Em, 3)),
-  // measure({text: 'verse2'}, chord(CAdd9, 1), chord(Em, 3)),
-  // measure(chord(CAdd9, 1), chord(Em, 3)),
+  measure({text: 'verse 1', timeSig: '4/4'}, chord(CAdd9, 1), chord(D, 4.5)),
+  measure(chord(CAdd9, 1), chord(Em, 3)),
+  measure({text: 'verse2'}, chord(CAdd9, 1), chord(Em, 3)),
+  measure(chord(CAdd9, 1), chord(Em, 3)),
   // measure(hold(4)),
   // measure(chord(CAdd9, 3.5), chord(G, 0.5)),
   // measure(hold(4)),
