@@ -6,7 +6,6 @@ const C = { name: 'C', notes: [x, 3, 2, 0, 1, 3] }
 const Cmaj7 = { name: 'Cmaj7', notes: [x, 3, 2, 0, 0, 3] }
 const Cadd9 = { name: 'Cadd9', notes: [x, 3, 2, 0, 3, 3] }
 const D = { name: 'D', notes: [x, x, 0, 2, 3, 2] }
-const D6 = { name: 'Daug5', notes: [x, x, 0, 2, 0, 2] }
 const G = { name: 'G', notes: [3, 2, 0, 0, 3, 3] }
 const Em = { name: 'Em', notes: [0, 2, 2, 0, 0, 0] }
 
